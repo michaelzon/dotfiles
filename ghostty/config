@@ -52,11 +52,13 @@ keybind = command+r=reload_config
 keybind = alt+§=previous_tab
 keybind = command+§=next_tab
 
-cursor-style-blink = true
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 
 theme = Ayu Mirage
 #theme = Ayu Light
 #theme = Breadog
 
 font-size = 18
-#shell-integration-features = no-cursor
+
