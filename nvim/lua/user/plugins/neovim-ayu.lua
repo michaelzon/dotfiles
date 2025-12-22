@@ -7,7 +7,7 @@ return {
       mirage = true,
       overrides = {
         Comment = { italic = true },
-        -- Function = { bg = '#ff77d5' }
+        -- Function = { bg = '#ff77d5'},
         Normal = { bg = '#252935'},
       }
     })

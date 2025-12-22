@@ -62,3 +62,7 @@ theme = Ayu Mirage
 
 font-size = 18
 
+font-feature = -dlig
+font-feature = -liga
+font-feature = -calt
+

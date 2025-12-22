@@ -13,10 +13,10 @@ return {
       component_separators = '',
       globalstatus = true,
       theme = {
-        normal = {
-          a = 'StatusLine',
-          b = 'StatusLine',
-          c = 'StatusLine',
+         normal = {
+           a = 'StatusLine',
+           b = 'StatusLine',
+           c = 'StatusLine',
         },
       },
     },
