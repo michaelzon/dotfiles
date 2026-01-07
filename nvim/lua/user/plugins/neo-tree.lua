@@ -3,7 +3,8 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     cmd = 'Neotree',
     keys = {
-      { '<leader>n', ':Neotree reveal toggle<CR>' },
+      { '<leader>1', ':Neotree position=left<CR>' },
+      { '<leader>n', ':Neotree position=float<CR>' },
     },
     branch = "v3.x",
     dependencies = {
@@ -19,5 +20,10 @@ return {
         },
       },
     },
+    config = function()
+      require("neo-tree").setup({
+        close_if_last_window = true,
+      })
+    end,
   },
 }

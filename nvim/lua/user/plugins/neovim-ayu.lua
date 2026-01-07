@@ -8,7 +8,7 @@ return {
       overrides = {
         Comment = { italic = true },
         -- Function = { bg = '#ff77d5'},
-        Normal = { bg = '#252935'},
+        -- Normal = { bg = '#252935'},
       }
     })
     require("ayu").colorscheme()

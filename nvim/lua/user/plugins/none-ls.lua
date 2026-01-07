@@ -14,5 +14,8 @@ return {
 		})
 
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+		vim.api.nvim_create_user_command("Makepretty", function()
+			vim.lsp.buf.format({async = true}) 
+		end, { desc = "Make your code pretty with eslint etc" })
 	end,
 }

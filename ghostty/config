@@ -59,7 +59,6 @@ shell-integration-features = no-cursor
 theme = Ayu Mirage
 #theme = Ayu Light
 #theme = Breadog
-
 font-size = 18
 
 font-feature = -dlig
