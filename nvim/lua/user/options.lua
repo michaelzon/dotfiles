@@ -24,6 +24,7 @@ vim.opt.spell = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.cursorline = true
 
 vim.opt.list = true                     -- enable the below listchars
 vim.opt.listchars = { tab = '▸ ', trail = '·', nbsp = '␣' }
@@ -57,3 +58,5 @@ vim.opt.backupdir:remove('.')          -- keep backups out of the current direct
 --vim.opt.secure = true
 --vim.opt.titlestring = '%f // nvim'
 --vim.opt.inccommand = 'split'
+--
+--require('oostenburg.init').colorscheme()

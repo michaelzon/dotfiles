@@ -3,8 +3,8 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     cmd = 'Neotree',
     keys = {
-      { '<leader>1', ':Neotree position=left<CR>' },
-      { '<leader>n', ':Neotree position=float<CR>' },
+      { '<leader>1', ':Neotree reveal=true position=left<CR>' },
+      { '<leader>n', ':Neotree reveal=true position=float<CR>' },
     },
     branch = "v3.x",
     dependencies = {
