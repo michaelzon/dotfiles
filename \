@@ -1,17 +1,5 @@
--- return {
--- 	"nvim-telescope/telescope.nvim",
--- 	tag = "v0.2.1",
--- 	dependencies = {
--- 		"nvim-lua/plenary.nvim",
--- 		-- optional but recommended
--- 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
--- 	},
--- 	pickers = {
--- 		find_files = true
--- 	}
--- }
 return {
-    'nvim-telescope/telescope.nvim', tag = 'v0.2.1',
+    'nvim-telescope/telescope.nvim', tag = 'v0.1.9',
       dependencies = { 'nvim-lua/plenary.nvim',
           'nvim-tree/nvim-web-devicons',
           'nvim-telescope/telescope-live-grep-args.nvim',
@@ -19,9 +7,8 @@ return {
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
       },
       keys = {
-        { '<leader>b', function() require('telescope.builtin').buffers() end },
-        { '<leader>f', function() require('telescope.builtin').find_files({hidden = false, previewer = true }) end },
-        { '<leader>F', function() require('telescope.builtin').find_files({ find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' }, prompt_title = 'All Files' }) end },
+        { '<leader>f', function() require('telescope.builtin').find_files(hidden = false) end },
+        { '<leader>F', function() require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' }) end },
         { '<leader>g', function() require('telescope').extensions.live_grep_args.live_grep_args({
           prompt_title = 'Grep Project',
           vimgrep_arguments = {
@@ -50,7 +37,7 @@ return {
             mappings = {
               i = {
                 ['<esc>'] = actions.close,
-                -- TODO this triggers an macos shortcut
+                -- TODO this triggers an macos shortcut 
                 --['<C-Down>'] = actions.cycle_history_next,
                 --['<C-Up>'] = actions.cycle_history_prev,
               },

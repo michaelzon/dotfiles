@@ -9,14 +9,18 @@ return {
 	},
 	opts = {
 		options = {
-			section_separators = "",
+			component_separators = { left = "", right = "" },
+			section_separators = { left = "", right = "" },
 			component_separators = "",
 			globalstatus = true,
 			theme = {
 				normal = {
 					a = "StatusLine",
-					b = "StatusLine",
-					c = "StatusLine",
+					b = "StatusLineNC",
+					c = "VertSplit",
+					x = "StatusLine",
+					y = "StatusLine",
+					z = "StatusLine",
 				},
 			},
 		},
@@ -42,10 +46,13 @@ return {
 				},
 			},
 			lualine_x = {
+				
 				{
-					require("lazy.status").updates,
-					cond = require("lazy.status").has_updates,
-					color = { fg = "#ff9e64" },
+				  function()
+					return "■ " .. require("lazy.status").updates()
+				  end,
+				  cond = require("lazy.status").has_updates,
+				  color = "StatusLineAccent",
 				},
 			},
 			lualine_y = {
