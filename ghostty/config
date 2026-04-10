@@ -56,7 +56,8 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-theme = Ayu Mirage
+theme = light:Ayu Light,dark:Ayu Mirage
+macos-titlebar-style = transparent
 #theme = Ayu Light
 #theme = Breadog
 font-size = 18
@@ -65,3 +66,4 @@ font-feature = -dlig
 font-feature = -liga
 font-feature = -calt
 
+#background-opacity = 0.9

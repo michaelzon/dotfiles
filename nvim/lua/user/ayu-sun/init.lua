@@ -410,7 +410,12 @@ function M.colorscheme()
 
 	-- php
 	set(0, "@constant.php", { fg = colors.syntax.keyword })
-	set(0, "@function.call.php", { fg = colors.syntax.markup })
+	set(0, "@function.call.php", { fg = palette.syntax.func.light })
+	set(0, "@type.builtin.php", { fg = palette.syntax.entity.dark }) 
+	-- set(0, "@punctuation.bracket.php", { fg = colors.delimiters.pink }) 
+	set(0, "@keyword.php", { fg = palette.syntax.keyword.mirage })
+	set(0, "@constructor.php" , { fg = palette.syntax.tag.mirage })
+	set(0, "@module.php" , { fg = palette.editor.fg.mirage })
 
 	-- rainbow delimiters (only brackets and parentheses etc)
 	set(0, "RainbowDelimiterPink", { fg = colors.delimiters.pink })

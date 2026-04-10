@@ -14,25 +14,30 @@ return {
 		},
 		lazy = false, -- neo-tree will lazily load itself
 		opts = {
+			close_if_last_window = true,
 			filesystem = {
 				filtered_items = {
-					visible = true,
+					visible = false,
 					show_hidden_count = true,
-					hide_dotfiles = false,
+					hide_dotfiles = true,
 					hide_gitignored = true,
 					hide_by_name = {
-						-- '.git',
-						-- '.DS_Store',
-						-- 'thumbs.db',
+						-- ".git",
 					},
-					never_show = {},
+					never_show = {
+						".DS_Store",
+					},
 				},
 			},
 		},
-		config = function()
-			require("neo-tree").setup({
-				close_if_last_window = true,
-			})
+		config = function(_, opts)
+			require("neo-tree").setup(opts)
+
+			vim.api.nvim_create_user_command("NeotreeToggleHidden", function()
+				local manager = require("neo-tree.sources.manager")
+				local commands = require("neo-tree.sources.filesystem.commands")
+				commands.toggle_hidden(manager.get_state("filesystem"))
+			end, { desc = "Neo-tree: toggle hidden (dotfiles + gitignored)" })
 		end,
 	},
 }

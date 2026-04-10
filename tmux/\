@@ -1,0 +1,36 @@
+set -g history-limit 10000
+set -g base-index 1
+
+set -s escape-time 0 
+
+# status line adjustments 
+set-option -g status-left-length 100
+set-option -g status-right-length 100
+
+# Active window: use default colors (no overrides)
+set -g window-status-current-style "fg=default,bg=default"
+
+# Inactive windows: dim the text
+set -g window-status-style "fg=default,dim"
+
+set-option -g renumber-windows on
+
+# could not get option key to work yet
+#set -g prefix M-w
+#unbind C-b
+#bind M-w send-prefix
+
+#bind Space last-window
+
+bind-key -r F new-window t
+
+bind  c  new-window      -c "#{pane_current_path}"
+bind  %  split-window -h -c "#{pane_current_path}"
+bind '"' split-window -v -c "#{pane_current_path}"
+
+# bind-key c command-prompt -p "window name:" "new-window; rename-window '%%'"
+
+bind-key T swap-window -t 1
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @resurrect-save 'S'
+set -g @resurrect-restore 'R'

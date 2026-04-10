@@ -15,7 +15,7 @@ return {
 				[""] = rd.strategy["global"],
 			},
 			query = {
-				[""] = "rainbow-parens",
+				["tsx"] = "rainbow-parens",
 			},
 			highlight = {
 				"RainbowDelimiterYellow",
@@ -25,3 +25,17 @@ return {
 		}
 	end,
 }
+
+-- vim.g.rainbow_delimiters = {
+--   strategy = { [""] = rd.strategy["global"] },
+--   query = {
+--     [""] = "rainbow-delimiters",
+--     -- optional: keep TSX parens-only if you prefer
+--     -- tsx = "rainbow-parens",
+--   },
+--   highlight = {
+--     "RainbowDelimiterYellow",
+--     "RainbowDelimiterPink",
+--     "RainbowDelimiterBlue",
+--   },
+-- }

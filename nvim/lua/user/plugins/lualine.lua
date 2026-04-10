@@ -1,4 +1,4 @@
--- Status line
+-- Status lin
 
 return {
 	"nvim-lualine/lualine.nvim",
@@ -13,16 +13,18 @@ return {
 			section_separators = { left = "", right = "" },
 			component_separators = "",
 			globalstatus = true,
-			theme = {
-				normal = {
-					a = "StatusLine",
-					b = "StatusLineNC",
-					c = "VertSplit",
-					x = "StatusLine",
-					y = "StatusLine",
-					z = "StatusLine",
-				},
-			},
+			theme = 'auto' 
+			--'iceberg_light',
+			-- {
+				-- normal = {
+				-- 	a = "StatusLine",
+				-- 	b = "StatusLineNC",
+				-- 	c = "VertSplit",
+				-- 	x = "StatusLine",
+				-- 	y = "StatusLine",
+				-- 	z = "StatusLine",
+				-- },
+			-- },
 		},
 		sections = {
 			lualine_a = {

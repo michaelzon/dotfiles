@@ -73,19 +73,7 @@ return {
 		vim.api.nvim_create_user_command("OrganizeTSImports", organize_imports, { desc = "Organize TS imports" })
 
 		-- Keymaps
-		vim.keymap.set("n", "<Leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>")
-		vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>")
-		vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-		vim.keymap.set("n", "gi", ":Telescope lsp_implementations<CR>")
-		vim.keymap.set("n", "gr", ":Telescope lsp_references<CR>")
-		vim.keymap.set("n", "<Leader>lr", ":LspRestart<CR>", { silent = true })
-		vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-		vim.keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-		vim.keymap.set("n", "<leader>l", function()
-			require("lint").try_lint()
-		end, { desc = "Run linting" })
-		vim.keymap.set("n", "<leader>oi", ":OrganizeTSImports<CR>")
-
+		
 		-- Diagnostic configuration
 		vim.diagnostic.config({
 			virtual_text = false,
