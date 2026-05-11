@@ -2,5 +2,5 @@
 require('user.options')
 require('user.keymaps')
 require('user.lazy')
-require('user.ayu-sun.init').colorscheme()
+-- require('user.ayu-sun.init').colorscheme()
 

@@ -2,10 +2,7 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		cmd = "Neotree",
-		keys = {
-			{ "<leader>1", ":Neotree reveal=true position=left<CR>" },
-			{ "<leader>n", ":Neotree reveal=true position=float<CR>" },
-		},
+
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -15,7 +12,12 @@ return {
 		lazy = false, -- neo-tree will lazily load itself
 		opts = {
 			close_if_last_window = true,
+
 			filesystem = {
+				follow_current_file = {
+					enabled = true,
+					leave_dirs_open = false, -- optional: `true` keeps auto-expanded dirs open when switching files
+				},
 				filtered_items = {
 					visible = false,
 					show_hidden_count = true,

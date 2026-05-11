@@ -18,10 +18,10 @@ return {
 		--local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		vim.lsp.enable("intelephense")
 		vim.lsp.config("intelephense", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable("intelephense")
 
 		vim.lsp.enable("ts_ls")
 		vim.lsp.config("ts_ls", {
@@ -53,14 +53,6 @@ return {
 			},
 		})
 
-		-- require("null_ls").setup({
-		--     sources = {
-		--         null_ls.builtins.formatting.stylua,
-		--         null_ls.builtins.completion.spell,
-		--         require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
-		--     },
-		-- })
-
 		local function organize_imports()
 			local params = {
 				command = "_typescript.organizeImports",
@@ -72,8 +64,6 @@ return {
 
 		vim.api.nvim_create_user_command("OrganizeTSImports", organize_imports, { desc = "Organize TS imports" })
 
-		-- Keymaps
-		
 		-- Diagnostic configuration
 		vim.diagnostic.config({
 			virtual_text = false,

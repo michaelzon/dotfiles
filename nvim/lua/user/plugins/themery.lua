@@ -6,16 +6,40 @@ return {
 			-- add the config here
 			themes = {
 				{
-					name = "Rose Pine",
-					colorscheme = "rose-pine-main",
+					name = "Ayu Light",
+					colorscheme = "ayu-light",
 				},
 				{
-					name = "Rose Pine Moon",
-					colorscheme = "rose-pine-moon",
+					name = "Ayu Mirage",
+					colorscheme = "ayu-mirage",
 				},
 				{
-					name = "Rose Pine Dawn",
-					colorscheme = "rose-pine-dawn",
+					name = "Carbonfox",
+					colorscheme = "carbonfox",
+				},
+				{
+					name = "Dawnfox",
+					colorscheme = "dawnfox",
+				},
+				{
+					name = "Dayfox",
+					colorscheme = "dayfox",
+				},
+				{
+					name = "Duskfox",
+					colorscheme = "duskfox",
+				},
+				{
+					name = "Nightfox",
+					colorscheme = "nightfox",
+				},
+				{
+					name = "Nordfox",
+					colorscheme = "nordfox",
+				},
+				{
+					name = "Terafox",
+					colorscheme = "terafox",
 				},
 				{
 					name = "Github Dark",
@@ -62,55 +86,56 @@ return {
 					colorscheme = "kanagawa-dragon",
 				},
 				{
-					name = "Ayu Mirage",
-					colorscheme = "ayu-mirage",
+					name = "Rose Pine",
+					colorscheme = "rose-pine-main",
 				},
 				{
-					name = "Ayu Light",
-					colorscheme = "ayu-light",
+					name = "Rose Pine Dawn",
+					colorscheme = "rose-pine-dawn",
+				},
+				{
+					name = "Rose Pine Moon",
+					colorscheme = "rose-pine-moon",
+				},
+				{
+					name = "Tokyo Night Day",
+					colorscheme = "tokyonight",
+					before = [[
+							require("tokyonight").setup({
+								style = "day",
+							})
+							vim.opt.background = "light"
+						]],
 				},
 				{
 					name = "Tokyo Night Moon",
 					colorscheme = "tokyonight",
 					before = [[
-            require("tokyonight").setup({
-              style = "moon",
-            })
-            vim.opt.background = "dark"
-          ]],
+							require("tokyonight").setup({
+								style = "moon",
+							})
+							vim.opt.background = "dark"
+						]],
 				},
-
-				{
-					name = "Tokyo Night Storm",
-					colorscheme = "tokyonight",
-					before = [[
-            require("tokyonight").setup({
-              style = "storm",
-            })
-            vim.opt.background = "dark"
-          ]],
-				},
-
 				{
 					name = "Tokyo Night Night",
 					colorscheme = "tokyonight",
 					before = [[
-            require("tokyonight").setup({
-              style = "night",
-            })
-            vim.opt.background = "dark"
-          ]],
+							require("tokyonight").setup({
+								style = "night",
+							})
+							vim.opt.background = "dark"
+						]],
 				},
-
 				{
-					name = "Tokyo Night Day",
+					name = "Tokyo Night Storm",
 					colorscheme = "tokyonight",
 					before = [[
-            require("tokyonight").setup({
-              style = "day",
-            })
-            vim.opt.background = "light"
-          ]],
+							require("tokyonight").setup({
+								style = "storm",
+							})
+							vim.opt.background = "dark"
+						]],
 				},
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
