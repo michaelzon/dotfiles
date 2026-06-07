@@ -19,8 +19,11 @@ ln -s "$DOTFILES/scripts/t" "$HOME/.local/bin/t"
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim 
 
-rm -rf $HOME/.config/test
-ln -s $DOTFILES/nvim $HOME/.config/test 
+rm -rf "$HOME/.config/test"
+ln -s "$DOTFILES/test" "$HOME/.config/test" 
+
+rm -rf "$HOME/.config/lvim"
+ln -s "$DOTFILES/lvim" "$HOME/.config/lvim" 
 
 
 
