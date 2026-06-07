@@ -1,0 +1,7 @@
+{
+  "Echo toJson pretty": {
+    "prefix": "echoj",
+    "body": "echo \\$${1:variable}->toJson(JSON_PRETTY_PRINT);",
+    "description": "Echo model/collection as pretty JSON"
+  }
+}
