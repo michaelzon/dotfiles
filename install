@@ -25,6 +25,6 @@ ln -s "$DOTFILES/test" "$HOME/.config/test"
 rm -rf "$HOME/.config/lvim"
 ln -s "$DOTFILES/lvim" "$HOME/.config/lvim" 
 
-
-
+rm -rf "$HOME/.p10k.zsh"
+ln -s "$DOTFILES/zsh/p10k.zsh" "$HOME/.p10k.zsh"
 
